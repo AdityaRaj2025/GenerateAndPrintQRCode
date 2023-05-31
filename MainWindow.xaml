@@ -1,0 +1,25 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QrCodePrintSample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- QR Code Input -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Enter Data:" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtQRData" Margin="5" Width="300"/>
+            <Button Content="Print QR Code" Click="PrintQRCode_Click"/>
+        </StackPanel>
+
+        <!-- QR Code Image -->
+        <Image x:Name="imgQRCode" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200"/>
+    </Grid>
+</Window>
